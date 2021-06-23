@@ -136,6 +136,11 @@ export default function AddLiquidity({
     let args: Array<string | string[] | number>
     let value: BigNumber | null
     if (currencyA === ETHER || currencyB === ETHER) {
+      console.log("ssssssssssssssss");
+      console.log(currencyA);
+      console.log(currencyB);
+      console.log(chainId);
+      console.log(wrappedCurrency(ETHER, chainId)?.address);
       const tokenBIsBNB = currencyB === ETHER
       estimate = router.estimateGas.addLiquidityETH
       method = router.addLiquidityETH
@@ -165,6 +170,8 @@ export default function AddLiquidity({
     }
 
     setAttemptingTxn(true)
+    console.log("aaaaaaaaaaaaaaa");
+    console.log(args);
     // const aa = await estimate(...args, value ? { value } : {})
     await estimate(...args, value ? { value } : {})
       .then((estimatedGasLimit) =>
@@ -172,6 +179,7 @@ export default function AddLiquidity({
           ...(value ? { value } : {}),
           gasLimit: calculateGasMargin(estimatedGasLimit),
         }).then((response) => {
+          console.log("ccccccccccc");
           setAttemptingTxn(false)
 
           addTransaction(response, {
@@ -184,6 +192,7 @@ export default function AddLiquidity({
         })
       )
       .catch((e) => {
+      console.log("ddddddddddddd");
         setAttemptingTxn(false)
         // we only care if the error is something _other_ than the user rejected the tx
         if (e?.code !== 4001) {

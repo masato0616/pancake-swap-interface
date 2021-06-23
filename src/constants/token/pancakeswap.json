@@ -1114,6 +1114,30 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "https://exchange.pancakeswap.finance/images/coins/0x42f6f551ae042cbe50c739158b4f0cac0edb9096.png"
+    },
+    {
+      "name": "BUSD Token",
+      "symbol": "BUSD",
+      "address": "0xed24fc36d5ee211ea25a80239fb8c4cfd80f12ee",
+      "chainId": 97,
+      "decimals": 18,
+      "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xe9e7cea3dedca5984780bafc599bd69add087d56.png"
+    },
+    {
+      "name": "Test Token",
+      "symbol": "TST",
+      "address": "0x9521C35D46a207C62b0BF883c7E6e75089633694",
+      "chainId": 97,
+      "decimals": 18,
+      "logoURI": ""
+    },
+    {
+      "name": "Test Cake Token",
+      "symbol": "TstCake",
+      "address": "0xC420f5DdE86D5b84761C7113A80E3b1784bA239C",
+      "chainId": 97,
+      "decimals": 18,
+      "logoURI": ""
     }
   ]
 }

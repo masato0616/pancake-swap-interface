@@ -112,10 +112,12 @@ export default function RemoveLiquidity({
     const liquidityAmount = parsedAmounts[Field.LIQUIDITY]
     if (!liquidityAmount) throw new Error('missing liquidity amount')
     // try to gather a signature for permission
+    console.log("aaaaaaaaaaaaaa");
     const nonce = await pairContract.nonces(account)
 
     const deadlineForSignature: number = Math.ceil(Date.now() / 1000) + deadline
 
+    console.log("bbbbbbbbbbbbbb");
     const EIP712Domain = [
       { name: 'name', type: 'string' },
       { name: 'version', type: 'string' },
@@ -123,7 +125,7 @@ export default function RemoveLiquidity({
       { name: 'verifyingContract', type: 'address' },
     ]
     const domain = {
-      name: 'Pancake LPs',
+      name: '777 LPs',
       version: '1',
       chainId,
       verifyingContract: pair.liquidityToken.address,
@@ -142,6 +144,7 @@ export default function RemoveLiquidity({
       nonce: nonce.toHexString(),
       deadline: deadlineForSignature,
     }
+    console.log("cccccccccccc");
     const data = JSON.stringify({
       types: {
         EIP712Domain,
@@ -152,6 +155,9 @@ export default function RemoveLiquidity({
       message,
     })
 
+    console.log("ddddddddddd");
+    console.log(account);
+    console.log(data);
     library
       .send('eth_signTypedData_v4', [account, data])
       .then(splitSignature)
