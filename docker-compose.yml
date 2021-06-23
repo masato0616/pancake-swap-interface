@@ -6,7 +6,7 @@ services:
       dockerfile: docker/VueDockerfile
     working_dir: /var/app
     environment:
-      APP_HOST: 192.168.1.100:3000
+      APP_HOST: localhost:3000
       TZ: Asia/Tokyo
     command: /bin/sh -c 'yarn install&& yarn run start'
     volumes:

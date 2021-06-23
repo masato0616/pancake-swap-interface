@@ -4,7 +4,7 @@ const config: MenuEntry[] = [
   {
     label: 'Home',
     icon: 'HomeIcon',
-    href: 'http://192.168.1.100:3000/',
+    href: 'http://localhost:3000/',
   },
   {
     label: 'Trade',
@@ -24,12 +24,12 @@ const config: MenuEntry[] = [
   {
     label: 'Farms',
     icon: 'FarmIcon',
-    href: 'http://192.168.1.100:3000/farms',
+    href: 'http://localhost:3000/farms',
   },
   {
     label: 'Pools',
     icon: 'PoolIcon',
-    href: 'http://192.168.1.100:3000/syrup',
+    href: 'http://localhost:3000/syrup',
   },
   {
     label: 'More',
