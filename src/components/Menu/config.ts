@@ -1,10 +1,12 @@
 import { MenuEntry, menuStatus } from '@pancakeswap-libs/uikit'
 
+const frontUrl = process.env.REACT_APP_FRONT_URL;
+
 const config: MenuEntry[] = [
   {
     label: 'Home',
     icon: 'HomeIcon',
-    href: 'http://localhost:3000/',
+    href: frontUrl,
   },
   {
     label: 'Trade',
@@ -24,12 +26,12 @@ const config: MenuEntry[] = [
   {
     label: 'Farms',
     icon: 'FarmIcon',
-    href: 'http://localhost:3000/farms',
+    href: `${frontUrl}/farms`,
   },
   {
     label: 'Pools',
     icon: 'PoolIcon',
-    href: 'http://localhost:3000/syrup',
+    href: `${frontUrl}/syrup`,
   },
   {
     label: 'More',
