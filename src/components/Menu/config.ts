@@ -1,4 +1,4 @@
-import { MenuEntry, menuStatus } from '@pancakeswap-libs/uikit'
+import { MenuEntry } from '@pancakeswap-libs/uikit'
 
 const frontUrl = process.env.REACT_APP_FRONT_URL;
 
